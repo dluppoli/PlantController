@@ -53,7 +53,7 @@ namespace PlantController.Models
             get
             {
                 string sep = ";";
-                return Id + sep + Code + sep + Name + sep + Quantity + sep + OrderDate.ToString("yyyyMMdd") + sep + StateId;
+                return Id + sep + Code + sep + Name + sep + Quantity + sep + OrderDate.ToString("yyyyMMdd") + sep + StateId + sep;
             }
         }
 
@@ -61,9 +61,10 @@ namespace PlantController.Models
         {
             get
             {
-                if (OrderDate > DateTime.Today) return 0;
-
-                return (DateTime.Today - OrderDate).Days;
+                if (OrderDate > DateTime.Today)
+                    return 0;
+                else
+                    return (DateTime.Today - OrderDate).Days;
             }
         }
     }
