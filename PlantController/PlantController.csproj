@@ -78,6 +78,8 @@
     </Compile>
     <Compile Include="Helpers\Converters.cs" />
     <Compile Include="Helpers\DownloadHelper.cs" />
+    <Compile Include="Helpers\FileDownloader.cs" />
+    <Compile Include="Helpers\IFileDownloader.cs" />
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemModelExtension.cs" />

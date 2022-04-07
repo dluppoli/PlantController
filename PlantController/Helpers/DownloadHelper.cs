@@ -9,12 +9,20 @@ namespace PlantController.Helpers
 {
     public class DownloadHelper
     {
+        private IFileDownloader fileDownloader;
+
+
+        public DownloadHelper(IFileDownloader fileDownloader=null)
+        {
+            this.fileDownloader = fileDownloader ?? new FileDownloader();
+        }
+
         public bool DownloadFile(string fileUrl, string fileDestination)
         {
-            WebClient client = new WebClient();
+            //WebClient client = new WebClient();
             try
             {
-                client.DownloadFile(fileUrl, fileDestination);
+                fileDownloader.DownloadFile(fileUrl, fileDestination);
                 return true;
             }
             catch (WebException)
