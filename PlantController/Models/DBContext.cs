@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PlantController.Models
 {
-    public class DBContext
+    public class DBContext : IDBContext
     {
-        public List<Item> Items;
+        public List<Item> Items { get; set; }
 
         public DBContext()
         {

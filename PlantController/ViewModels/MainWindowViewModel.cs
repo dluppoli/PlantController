@@ -34,7 +34,7 @@ namespace PlantController.ViewModels
 
         private void loadData()
         {
-            ItemsList = Items.getAllItems();
+            ItemsList = Items.getAllItems(new DBContext());
         }
 
         public void ExtractCSV()

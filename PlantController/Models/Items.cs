@@ -9,18 +9,18 @@ namespace PlantController.Models
 {
     public static class Items
     {
-        public static ItemsList getAllItems()
+        public static ItemsList getAllItems(IDBContext context)
         {
-            DBContext context = new DBContext();
+            //DBContext context = new DBContext();
             ItemsList result = new ItemsList(context.Items.ToList());
             return result;
         }
 
         
-        public static ItemsList getAllWithShippingDate()
+        public static ItemsList getAllWithShippingDate(IDBContext context)
         {
             //Data di spedizione calcolata come data dell'ordiine + 10gg. Se cade di sabato/domenica si sposta al lunedì successivo
-            ItemsList result = getAllItems();
+            ItemsList result = getAllItems(context);
 
             foreach(Item i in result)
             {

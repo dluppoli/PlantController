@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="DownloadHelperTests.cs" />
     <Compile Include="ItemsListTests.cs" />
+    <Compile Include="ItemsTests.cs" />
     <Compile Include="ItemTests.cs" />
     <Compile Include="ItemTestsMsTest.cs" />
     <Compile Include="MainWindowViewModelTests.cs" />
