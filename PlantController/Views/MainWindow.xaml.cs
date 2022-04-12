@@ -40,5 +40,10 @@ namespace PlantController
         {
             _viewmodel.DownloadUpdates();
         }
+
+        private void CreateException_Click(object sender, RoutedEventArgs e)
+        {
+            _viewmodel.CreateException();
+        }
     }
 }

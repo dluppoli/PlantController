@@ -34,15 +34,27 @@ namespace PlantController.ViewModels
 
         private void loadData()
         {
-            ItemsList = Items.getAllItems(new DBContext());
+            ItemsList = Items.getAllWithShippingDate(new DBContext());
         }
 
         public void ExtractCSV()
         {
-            ItemsList items = new ItemsList(ItemsList.Where(q => q.IsSelected == true).ToList());
+            ItemsList items = new ItemsList(
+                ItemsList
+                .Where(q => q.IsSelected == true)
+                .Where(q=>q.StateId==1)
+                .OrderBy(ob=>ob.OrderDate)
+                .ThenByDescending(ob=>ob.Quantity)
+                .ToList());
             Items.WriteCsv(items, "out.txt");
             MessageBox.Show("Esportazione effettuata!");
             loadData();
+        }
+
+        internal void CreateException()
+        {
+            Item newItem = new Item { Id = 100 };
+            Items.addItem(newItem);
         }
 
         internal void DownloadUpdates()
