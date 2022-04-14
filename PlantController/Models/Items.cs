@@ -44,7 +44,7 @@ namespace PlantController.Models
 
                 foreach(Tuple<DateTime, DateTime> holiday in holidays)
                 {
-                    if( shippingDate>= holiday.Item1 ||
+                    if( shippingDate>= holiday.Item1 &&
                         shippingDate <= holiday.Item2 )
                     {
                         shippingDate = holiday.Item2.AddDays(1);
