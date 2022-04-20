@@ -12,6 +12,8 @@ namespace PlantController.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        private List<Item> _oldItemsList = new List<Item>();
+            
         private ItemsList _itemsList;
         public ItemsList ItemsList
         {
@@ -21,6 +23,7 @@ namespace PlantController.ViewModels
             }
             set
             {
+                if( _itemsList!=null) _oldItemsList.AddRange(_itemsList);
                 _itemsList = value;
                 NotifyOfPropertyChanged("ItemsList");
             }
@@ -51,10 +54,21 @@ namespace PlantController.ViewModels
             loadData();
         }
 
+        internal void ReloadData()
+        {
+            loadData();
+        }
+
         internal void CreateException()
         {
             Item newItem = new Item { Id = 100 };
             Items.addItem(newItem);
+        }
+
+        internal async void BadTimer()
+        {
+            await Timers.StartTimers();
+            MessageBox.Show("Bad Timer terminato");
         }
 
         internal void DownloadUpdates()

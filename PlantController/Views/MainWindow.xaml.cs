@@ -45,5 +45,15 @@ namespace PlantController
         {
             _viewmodel.CreateException();
         }
+
+        private void BadTimer_Click(object sender, RoutedEventArgs e)
+        {
+            _viewmodel.BadTimer();
+        }
+
+        private void ReloadData_Click(object sender, RoutedEventArgs e)
+        {
+            _viewmodel.ReloadData();
+        }
     }
 }

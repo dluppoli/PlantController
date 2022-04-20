@@ -102,6 +102,7 @@
     <Compile Include="Helpers\DownloadHelper.cs" />
     <Compile Include="Helpers\FileDownloader.cs" />
     <Compile Include="Helpers\IFileDownloader.cs" />
+    <Compile Include="Helpers\Timers.cs" />
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\IDBContext.cs" />
     <Compile Include="Models\Item.cs" />

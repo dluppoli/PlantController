@@ -15,8 +15,10 @@
 
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="?">
+                <MenuItem Header="Ricarica dati" Click="ReloadData_Click"/>
                 <MenuItem Header="Scarica aggiornamenti" Click="DownloadUpdates_Click"/>
                 <MenuItem Header="Genera Eccezione" Click="CreateException_Click"/>
+                <MenuItem Header="Bad Timer" Click="BadTimer_Click"/>
             </MenuItem>
         </Menu>
 
