@@ -19,6 +19,8 @@
                 <MenuItem Header="Scarica aggiornamenti" Click="DownloadUpdates_Click"/>
                 <MenuItem Header="Genera Eccezione" Click="CreateException_Click"/>
                 <MenuItem Header="Bad Timer" Click="BadTimer_Click"/>
+                <MenuItem Header="Async Demo 1" Click="AsyncDemo1_Click"/>
+                <MenuItem Header="Async Demo 2" Click="AsyncDemo2_Click"/>
             </MenuItem>
         </Menu>
 

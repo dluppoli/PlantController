@@ -55,5 +55,15 @@ namespace PlantController
         {
             _viewmodel.ReloadData();
         }
+
+        private void AsyncDemo1_Click(object sender, RoutedEventArgs e)
+        {
+            _viewmodel.AsyncDemo1();
+        }
+
+        private void AsyncDemo2_Click(object sender, RoutedEventArgs e)
+        {
+            _viewmodel.AsyncDemo2();
+        }
     }
 }

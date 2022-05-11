@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+
 namespace PlantController.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
@@ -63,6 +64,16 @@ namespace PlantController.ViewModels
         {
             Item newItem = new Item { Id = 100 };
             Items.addItem(newItem);
+        }
+
+        internal void AsyncDemo1()
+        {
+            AsyncDemo.Start();
+        }
+    
+        internal async void AsyncDemo2()
+        {
+            await PlantController.Helpers.AsyncDemo2.Start();
         }
 
         internal async void BadTimer()
