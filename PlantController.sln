@@ -13,6 +13,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB_Example.UnitTests", "VB_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantController.Benchmarks", "PlantController.Benchmarks\PlantController.Benchmarks.csproj", "{621E797D-11B9-4194-9C8E-8E269CA41827}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelFileDownloader", "ParallelFileDownloader\ParallelFileDownloader.csproj", "{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,14 @@ Global
 		{621E797D-11B9-4194-9C8E-8E269CA41827}.Release|Any CPU.Build.0 = Release|Any CPU
 		{621E797D-11B9-4194-9C8E-8E269CA41827}.Release|x64.ActiveCfg = Release|Any CPU
 		{621E797D-11B9-4194-9C8E-8E269CA41827}.Release|x64.Build.0 = Release|Any CPU
+		{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}.Debug|x64.Build.0 = Debug|Any CPU
+		{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}.Release|x64.ActiveCfg = Release|Any CPU
+		{1AD96DAE-50B6-4DD2-AD98-40C38782E11E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

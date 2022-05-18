@@ -16,10 +16,12 @@ namespace PlantController.Helpers
             for (int i = 0; i < 10; i++)
             {
                 int j = i;
-                timers.Add(Task.Run( async () => await BetterTimer( (j + 1)*10 )) );
+                timers.Add( Task.Run( () => BetterTimer( (j + 1)*10 )) );
+                //timers.Add(BetterTimer((j + 1) * 10));
             }
 
-            timers.Add(Task.Run(() => BadTimer(10)));
+            //timers.Add(Task.Run(() => BadTimer(10)));
+            timers.Add(BadTimerAsync(10));
 
             await Task.WhenAll(timers);
             Console.WriteLine("Timer has finished");
@@ -38,6 +40,13 @@ namespace PlantController.Helpers
             }
             Console.WriteLine("Timer for {0} seconds ended", seconds);
         }
+
+
+        public static Task BadTimerAsync(int seconds)
+        {
+            return Task.Run(() => BadTimer(seconds));
+        }
+
 
         public static async Task BetterTimer(int seconds)
         {
